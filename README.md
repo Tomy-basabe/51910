@@ -61,11 +61,11 @@ Por defecto, va a leer el archivo `input.txt` y procesarlo.
 
 ---
 
-"" Archivos de ejemplo
+## Archivos de ejemplo
 
 Podés probar cambiando el contenido de `input.txt` con alguno de estos ejemplos:
 
-ejemplo1.txt (válido)
+# ejemplo1.txt (válido)
 pila MiPila {
 crear([1, 2, 3])!
 empujar(4)!
@@ -73,7 +73,7 @@ mirar()!
 }
 
 
-ejemplo2.txt (válido)
+# ejemplo2.txt (válido)
 pila OtraPila {
 crear([])
 empujar(10)!
@@ -81,10 +81,16 @@ sacar()!
 }
 
 
-ejemplo3.txt (con error)
+# ejemplo3.txt (con error)
 pila Fallo {
 crear([10, 20, 30)
 empujar(40)!
+}
+
+# ejemplo4.txt (con error)
+pila Mal {
+crear([1, 2,])
+empujar()!
 }
 
 Ese tiene un paréntesis sin cerrar y va a dar un error sintáctico.
