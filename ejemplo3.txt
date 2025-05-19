@@ -1,0 +1,4 @@
+pila Fallo {
+crear([10, 20, 30)
+empujar(40)!
+}

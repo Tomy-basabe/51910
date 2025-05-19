@@ -1,0 +1,5 @@
+pila OtraPila {
+crear([])
+empujar(10)!
+sacar()!
+}

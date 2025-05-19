@@ -1,0 +1,28 @@
+Se proporciona una gramática en notación EBNF que describe un lenguaje específico. Utilizando ANTLR4 con JavaScript, implemente un analizador que procese un archivo de entrada (input.txt) con código fuente escrito en dicho lenguaje.
+<programa> ::= "pila" <nombre> "{" <comandos> "}"
+<comandos> ::= {<operación> }*
+<operación> ::= <push> | <pop> | <peek> | <crear>
+<crear> ::= "crear" "(" <lista> ")" "!"
+<push> ::= "empujar" "(" <valor> ")" "!"
+<pop> ::= "sacar" "(" ")" "!"
+<peek> ::= "mirar" "(" ")" "!"
+<valor> ::= <número> | <texto>
+<lista> ::= "[" [<valor> ("," {<valor>)}* "]"
+<número> ::= {<digito>}+
+<texto>
+::="" { <carácter>} """"
+El analizador deberá realizar las siguientes tareas:
+1. Análisis léxico y sintáctico: realizar el análisis léxico y sintáctico sobre el código fuente e informar si la entrada es correcta o contiene errores. En caso de errores, indicar la línea en la que ocurren y la causa del problema.
+2. Tabla de lexemas-tokens: Generar una tabla que contenga los lexemas y sus respectivos tokens reconocidos durante el análisis léxico.
+3. Árbol de análisis sintáctico: Construir y mostrar el árbol de análisis sintáctico concreto de la entrada. Puede representarse en formato de texto.
+4. Interpretación: Traducir el código fuente al lenguaje JavaScript y ejecutarlo como lo haría un intérprete básico.
+El desarrollo debe entregarse cumpliendo las pautas para la entrega establecidas en el documento Pautas de trabajo para analizador.
+Ejemplo de Código
+pila Ejemplo {
+crear([10, 20, 30])!
+empujar(40)! #[10, 20, 30, 40]
+}
+Traducido a JavaScript
+// Implementación sin clases (solo arrays)
+let pila = [10, 20, 30]; // crear ([10, 20, 30])
+pila.push(40); // empujar(40)!

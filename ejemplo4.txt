@@ -1,0 +1,4 @@
+pila Mal {
+crear([1, 2,])
+empujar()!
+}
